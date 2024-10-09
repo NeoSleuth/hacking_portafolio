@@ -1,0 +1,283 @@
+/* Paletas de colores:
+verde vibrante: 4FEF30
+gris oscuro header: 1C1C1C
+gris claro body: 2E2E2E
+blanco texto: E0E0E0
+
+
+fixed backgrounds:
+header: 151515
+body: 1B1B1B
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    /* background-color: #2E2E2E; */
+    /* background-color: #1B1B1B; */
+    background-color: #151515;
+}
+
+header {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #1C1C1C;
+    /* background-color: #151515; */
+}
+
+li,a,button {
+    font-weight: 500;
+    font-size: 16px;
+    color: #E0E0E0;
+    text-decoration: none;
+}
+
+#logo {
+    cursor: pointer;
+    font-size: small;
+    color: #4FEF30;
+}
+
+/* #logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #1C1C1C;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.3s;
+} */
+
+#social {
+    border: none
+}
+
+#social lu {
+    list-style: none;
+}
+
+#social li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+#social li a {
+    transition: all 0.3s ease 0s;
+}
+
+#social li a:hover {
+    color: #9ac61e;
+}
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    background-color: #2C2C2C;
+    /* border:solid #ffd60a; */
+    color: #FFFFFF;
+    border: solid #A7F220;
+}
+
+button:hover {
+    transform:scale(1.05);
+    background-color: #FFFFFF;
+    background-color: #A7F220;
+    color: #2C2C2C;
+}
+
+
+
+
+/* Main Body  */
+
+/* Home Section */
+#home {
+    height: 90vh;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.description {
+    margin-left: 6%;
+    max-width: 600px;
+}
+
+.description h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.description h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #151515;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.description h2 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #4FEF30;
+}
+
+.description h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #151515;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+
+.description p {
+    position: relative;
+    font-size: 18px;
+    margin: 20px 0 40px;
+}
+
+.description p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #151515;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.home_img {
+    scale: 35%;
+    margin-left: 0%;
+    border: solid white;
+}
+
+/* Skills Section */
+#skills {
+    height: 60vh;
+    padding: 8% 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white; 
+}
+
+.skills_dsc {
+    margin-left: 6%;
+    max-width: 800px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #1C1C1C;
+}
+
+.skill_tree {
+    margin-left: 80px;
+}
+
+
+
+
+
+/* Projects Section */
+#projects {
+    /* height: 90vh; */
+    padding: 8% 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 60px;
+    justify-items: center;
+    align-items: center;
+    /* border-bottom: solid #A7F220; */
+    color: white;
+}
+
+.project_box {
+    width: 420px;
+    height: 420px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: solid #ffd60a;
+    background-color: #1C1C1C;
+
+    transition: 0.2s;
+}
+
+.project_box:hover {
+    transform: translateY(-12px);
+}
+
+.project_img {
+    scale: 30%;
+}
+
+
+/* Footer Section */
+footer {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    margin: auto;
+    background-color: #1C1C1C;
+    color: #E0E0E0;
+}
+
+footer a {
+    margin-bottom: 15px;
+    transition: all 0.3s ease 0s;
+}
+
+footer a:hover {
+    color: #9ac61e;
+}
+
+footer h6 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
